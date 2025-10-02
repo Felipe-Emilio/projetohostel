@@ -1,8 +1,17 @@
 /* ==========================
    Mayaví Pajú — templatemo-main.css
-   ========================== */
+   ==========================
+   
+   rgb(231, 122, 107)
+   
+   
+   */
 
 /* Reset / base */
+
+
+
+
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -19,10 +28,17 @@ p { font-size: 15px; line-height: 25px; margin: 0 0 1rem 0; color: #333; }
 section { padding: 25px 0 35px; background: transparent; }
 
 /* Links */
-a { color: #ff7d27; text-decoration: none; transition: color .2s ease; }
-a:hover { color: #ff8e43; }
+a { color: rgb(231, 122, 107); text-decoration: none; transition: color .2s ease; }
+a:hover { color: rgb(231, 122, 107); }
 
+
+
+/* Reset / base */
+/* ============================================================================================== */
 /* ========= FIXED SIDE NAV ========= */
+
+
+
 .fixed-side-navbar {
   position: fixed;
   top: 50%;
@@ -33,8 +49,15 @@ a:hover { color: #ff8e43; }
   padding: 30px 0;
   transition: all .3s;
 }
-.fixed-side-navbar .nav { margin: 0; padding: 0; list-style: none; }
-.fixed-side-navbar .nav > li { position: relative; display: block; margin: 8px 0; }
+.fixed-side-navbar .nav { 
+  margin: 0; 
+  padding: 0; 
+  list-style: none; 
+}
+.fixed-side-navbar .nav > li { 
+  position: relative; 
+  display: block; margin: 8px 0; 
+}
 .fixed-side-navbar .nav > li a {
   color: #fff;
   min-height: 32px;
@@ -43,7 +66,10 @@ a:hover { color: #ff8e43; }
   display: inline-block;
   position: relative;
 }
-.fixed-side-navbar .nav > li a span { display: none; transition: all .2s; }
+.fixed-side-navbar .nav > li a span { 
+  display: none; 
+  transition: all .2s; 
+}
 .fixed-side-navbar:hover .nav > li a span {
   display: block;
   color: rgba(0,0,0,0.65);
@@ -67,17 +93,27 @@ a:hover { color: #ff8e43; }
   transition: all .3s;
 }
 .fixed-side-navbar .nav > li a.active,
-.fixed-side-navbar .nav > li a:hover { color: #ff7d27; }
+.fixed-side-navbar .nav > li a:hover { 
+  color: rgb(231, 122, 107); 
+}
 
 /* esconder nav fixa em telas pequenas */
 @media (max-width: 767px) {
   .fixed-side-navbar { display: none; }
 }
 
+
+
+
+/* ========= FIXED SIDE NAV ========= */
+/* ============================================================================================== */
 /* ========= PRIMARY BUTTON ========= */
+
+
+
 .primary-button a {
   display: inline-block;
-  background-color: #ff7d27;
+  background-color: rgb(231, 122, 107);
   padding: 12px 20px;
   border-radius: 6px;
   text-transform: uppercase;
@@ -88,10 +124,21 @@ a:hover { color: #ff8e43; }
   text-decoration: none;
   transition: background .2s ease;
 }
-.primary-button a:hover { background: #ff8e43; }
+.primary-button a:hover { background: rgb(231, 122, 107); }
 
+
+
+/* ========= PRIMARY BUTTON ========= */
+/* ============================================================================================== */
 /* ========= PARALLAX / BANNER ========= */
-.parallax-content { width: 100%; min-height: 100vh; background-size: cover; background-position: center center; }
+
+
+
+.parallax-content { 
+  width: 100%; min-height: 100vh; 
+  background-size: cover; 
+  background-position: center center; 
+}
 .baner-content {
   padding-top: 30vh;
   text-align: center;
@@ -112,10 +159,27 @@ a:hover { color: #ff8e43; }
   font-weight: 900;
   letter-spacing: 1px;
 }
-.baner-content em { color: #ff7d27; font-weight: 600; font-style: normal; }
-.baner-content span { display: inline-block; margin-top: -20px; font-weight: 300; font-size: clamp(18px, 3.5vw, 48px); color: #fff; }
+.baner-content em { 
+  color: rgb(231, 122, 107); 
+  font-weight: 600; 
+  font-style: normal; 
+}
+.baner-content span { 
+  display: inline-block; 
+  margin-top: -20px; 
+  font-weight: 300; 
+  font-size: clamp(18px, 3.5vw, 48px); 
+  color: #fff; 
+}
 
+
+
+/* ========= PARALLAX / BANNER ========= */
+/* ============================================================================================== */
 /* ========= HIGHLIGHT (logo circular + frase) ========= */
+
+
+
 .highlight-banner {
   display: flex;
   flex-direction: column;
@@ -136,9 +200,10 @@ a:hover { color: #ff8e43; }
   margin-bottom: 10px;
 }
 .highlight-text {
-  font-family: 'Pacifico', cursive; /* fonte praia */
-  font-size: clamp(26px, 4vw, 42px);
+  font-family: "Lobster", sans-serif;
   font-weight: 400;
+  font-style: normal;
+  font-size: clamp(26px, 4vw, 42px);
   color: #fff;
   text-align: center;
   line-height: 1.4;
@@ -154,7 +219,7 @@ a:hover { color: #ff8e43; }
   display: block;
   width: 80px;
   height: 3px;
-  background: #ff7d27;
+  background:rgb(231, 122, 107);
   margin: 20px auto 0;
   border-radius: 2px;
 }
@@ -164,7 +229,14 @@ a:hover { color: #ff8e43; }
   100% { opacity: 1; transform: translateY(0); }
 }
 
+
+
+/* ========= HIGHLIGHT (logo circular + frase) ========= */
+/* ============================================================================================== */
 /* ========= SERVICE CONTENT ========= */
+
+
+
 .service-content {
   padding-top: 15vh;
   padding-left: 15px;
@@ -176,14 +248,59 @@ a:hover { color: #ff8e43; }
   color: #fff;
   background-attachment: fixed;
 }
-.service-content .left-text h4 { font-size: 24px; font-weight: 500; color: #fff; margin-bottom: 10px; }
-.service-content .left-text .line-dec { width: 45px; height: 3px; background: #ff7d27; margin: 20px 0; }
-.service-content .left-text p { color: #f3f3f3; }
-.service-content .service-item { background: rgba(0,0,0,0.5); padding: 25px 30px; text-align: center; color: #e0d8d8; margin-bottom: 30px; border-radius: 6px; }
-.service-content .service-item .line-dec { width: 45px; height: 3px; background: #ff7d27; margin: 20px auto 15px; }
-.service-content .service-item p { color: #f3f3f3;}
-/* ========= PROJECTS / CAROUSEL ========= */
+.service-content .left-text h4 { 
+  font-family: "Lobster", sans-serif;
+  font-style: normal;
+  font-size: clamp(26px, 4vw, 42px);
+  font-size: 30px; 
+  font-weight: 300; 
+  color: #fff; 
+  margin-bottom: 10px; 
+}
+.service-content .left-text h1 { 
+  font-family: "Lobster", sans-serif;
+  font-style: normal;
+  font-size: clamp(26px, 4vw, 42px);
+  font-size: 24px; 
+  font-weight: 300; 
+  color: #fff; 
+  margin-bottom: 10px; 
+}
+
+.service-content .left-text .line-dec { 
+  width: 45px; height: 3px; 
+  background: rgb(231, 122, 107);
+   margin: 20px 0; 
+  }
+.service-content .left-text p { 
+  color: #f3f3f3; 
+}
+.service-content .service-item { 
+  background: rgba(0,0,0,0.5); 
+  padding: 25px 30px; 
+  text-align: center; 
+  color: #e0d8d8; 
+  margin-bottom: 30px; 
+  border-radius: 6px; 
+}
+.service-content .service-item .line-dec { 
+  width: 45px; 
+  height: 3px; 
+  background: rgb(231, 122, 107); 
+  margin: 20px auto 15px; 
+}
+.service-content .service-item p { 
+  color: #f3f3f3;
+}
+
+
+
+/* ========= SERVICE CONTENT ========= */
+/* ============================================================================================== */
 /* ========= REVIEWS / CAROUSEL ========= */
+
+
+
 .projects-content {
   padding-left: 15px;
   padding-right: 15px;
@@ -221,7 +338,7 @@ a:hover { color: #ff8e43; }
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto 15px auto;
-  border: 3px solid #ff7d27;
+  border: 3px solid rgb(231, 122, 107);
 }
 
 .projects-content .review-name {
@@ -231,7 +348,7 @@ a:hover { color: #ff8e43; }
 }
 
 .projects-content .review-stars {
-  color: #ffcc00;
+  color:rgb(231, 122, 107);
   margin-bottom: 15px;
 }
 
@@ -276,13 +393,19 @@ a:hover { color: #ff8e43; }
     text-align: center;
 }
 
+
+
+/* ========= REVIEWS / CAROUSEL ========= */
+/* ============================================================================================== */
 /* ========= TABS / OUR STORY ========= */
+
+
 
 .tabs-content {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 8vh;
-  background-image: url('../img/mayavi_ap_sala.jpg');
+  background-image: url('../img/mayavi_ap_sala_escuro.jpg');
   background-size: cover;
   background-position: center center;
   min-height: 100vh;
@@ -310,9 +433,9 @@ a:hover { color: #ff8e43; }
   border: 4px solid #fff;
   border-radius: 6px;
 }
-.tabs a:hover { color: #ff7d27; 
+.tabs a:hover { color: rgb(231, 122, 107); 
 }
-.tabs .active { border-color: #ff7d27; 
+.tabs .active { border-color: rgb(231, 122, 107)
 }
 
 .tabs-content {
@@ -336,14 +459,31 @@ a:hover { color: #ff8e43; }
 
 
 .tabgroup p { 
-  background: rgba(0,0,0,0.5); 
-  color: #fff; padding: 25px; 
-  border-radius: 6px; }
+  background: rgba(141, 122, 122, 0.432);
+  color: #fff;
+  padding: 25px; 
+ 
+   
+}
+
+  .tabgroup h1 { 
+  background: rgba(141, 122, 122, 0.432);
+  color: #fff; 
+  padding: 25px; 
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(26px, 4vw, 42px);
+  
+}
 
 
-
-
+/* ========= TABS / OUR STORY ========= */
+/* ============================================================================================== */
 /* ========= CONTACT / MAP ========= */
+
+
+
 .contact-content {
   padding-left: 15px;
   padding-right: 15px;
@@ -354,7 +494,12 @@ a:hover { color: #ff8e43; }
   min-height: 60vh;
   background-attachment: fixed;
 }
-.contact-form { background: rgba(0,0,0,0.5); padding: 30px 25px; margin-bottom: 30px; border-radius: 6px; }
+.contact-form { 
+  background: rgba(0,0,0,0.5); 
+  padding: 30px 25px; 
+  margin-bottom: 30px; 
+  border-radius: 6px; 
+}
 #contact input, #contact textarea {
   border-radius: 3px;
   padding-left: 15px;
@@ -366,50 +511,240 @@ a:hover { color: #ff8e43; }
   width: 100%;
   margin-bottom: 15px;
 }
-#contact textarea { padding-top: 10px; min-height: 165px; max-height: 220px; }
-#contact button { display: inline-block; background: #ff7d27; padding: 12px 20px; width: 100%; border-radius: 6px; text-transform: uppercase; font-size: 13px; color: #fff; border: none; cursor: pointer; }
-#contact button:hover { background: #ff8e43; }
-.map { margin-bottom: 30px; width: 100%; background: rgba(0,0,0,0.45); padding: 15px; border-radius: 6px; }
+#contact textarea { 
+  padding-top: 10px; 
+  min-height: 165px; 
+  max-height: 220px; 
+}
+#contact button { 
+  display: inline-block; 
+  background: rgb(231, 122, 107); 
+  padding: 12px 20px; width: 100%; 
+  border-radius: 6px; 
+  text-transform: uppercase; 
+  font-size: 13px; 
+  color: #fff; 
+  border: none; 
+  cursor: pointer; 
+}
+#contact button:hover { 
+  background: rgb(231, 122, 107);
+}
+.map { 
+margin-bottom: 30px; 
+width: 100%; 
+background: rgba(0,0,0,0.45); 
+padding: 15px; 
+border-radius: 6px; 
+}
+
+
+/* ========= CONTACT / MAP ========= */
+/* ============================================================================================== */
+/* ========= FOOTER ========= */
+
+
+
+footer { 
+  text-align: center; 
+  background-color: #282b2f; 
+  padding: 60px 0; 
+  color: #fff; 
+}
+footer .primary-button { 
+  margin-bottom: 30px; 
+}
+footer ul { 
+  padding: 0; 
+  margin: 0; 
+  list-style: none; 
+}
+footer ul li { 
+  display: inline-block; 
+  margin: 0 4px; 
+}
+footer ul li a {
+  width: 40px; 
+  height: 40px; 
+  line-height: 40px; 
+  text-align: center; 
+  display: inline-block;
+  background: rgb(231, 122, 107); 
+  color: #282b2f; 
+  border-radius: 50%; 
+  text-decoration: none; 
+  font-size: 17px;
+}
+footer ul li a:hover { 
+  background: rgb(231, 122, 107); 
+  color: #282b2f; 
+}
+footer p { 
+  font-size: 12px; 
+  margin-top: 15px; 
+  color: #fff; 
+  letter-spacing: .5px; 
+  margin-bottom: 0; 
+}
+
 
 /* ========= FOOTER ========= */
-footer { text-align: center; background-color: #282b2f; padding: 60px 0; color: #fff; }
-footer .primary-button { margin-bottom: 30px; }
-footer ul { padding: 0; margin: 0; list-style: none; }
-footer ul li { display: inline-block; margin: 0 4px; }
-footer ul li a {
-  width: 40px; height: 40px; line-height: 40px; text-align: center; display: inline-block;
-  background: #ff7d27; color: #282b2f; border-radius: 50%; text-decoration: none; font-size: 17px;
+/* ============================================================================================== */
+/* ========= LIGHTBOX ========= */
+
+
+
+body:after { 
+  content: url(../img/close.png) url(../img/loading.gif) url(../img/prev.png) url(../img/next.png); 
+  display: none; 
 }
-footer ul li a:hover { background: #ff8e43; color: #282b2f; }
-footer p { font-size: 12px; margin-top: 15px; color: #fff; letter-spacing: .5px; margin-bottom: 0; }
+.lightboxOverlay { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  z-index: 99999; 
+  background-color: black; 
+  opacity: 0.8; 
+  display: none; 
+}
+.lightbox { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 100000; 
+  text-align: center; 
+  line-height: 0; 
+  font-weight: normal; 
+}
+.lightbox .lb-image { 
+  display: block; 
+  height: auto; 
+  max-width: inherit; 
+  max-height: none; 
+  border-radius: 3px; 
+  border: 4px solid white; 
+}
+
+
 
 /* ========= LIGHTBOX ========= */
-body:after { content: url(../img/close.png) url(../img/loading.gif) url(../img/prev.png) url(../img/next.png); display: none; }
-.lightboxOverlay { position: absolute; top: 0; left: 0; z-index: 99999; background-color: black; opacity: 0.8; display: none; }
-.lightbox { position: absolute; top: 0; left: 0; width: 100%; z-index: 100000; text-align: center; line-height: 0; font-weight: normal; }
-.lightbox .lb-image { display: block; height: auto; max-width: inherit; max-height: none; border-radius: 3px; border: 4px solid white; }
+/* ============================================================================================== */
+/* Additional lightbox / container styles (kept from template) */
+
+
+
+.lb-outerContainer { 
+  position: relative; 
+  width: 250px; 
+  height: 250px; 
+  margin: 0 auto; 
+  border-radius: 4px; 
+  background-color: white; 
+}
+.lb-loader { position: absolute; 
+  top: 43%; 
+  left: 0; 
+  height: 25%; 
+  width: 100%; 
+  text-align: center; 
+  line-height: 0; 
+}
+.lb-cancel { display: block;
+  width: 32px; 
+  height: 32px; 
+  margin: 0 auto; 
+  background: url(../img/loading.gif) no-repeat; 
+}
+.lb-nav { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  height: 100%; 
+  width: 100%; 
+  z-index: 10; 
+}
+.lb-nav a { 
+  outline: none; 
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='); 
+}
+.lb-prev, .lb-next { 
+  height: 100%; 
+  cursor: pointer; 
+  display: block; 
+}
+.lb-nav a.lb-prev { 
+  width: 34%; 
+  left: 0; 
+  float: left; 
+  background: url(../img/prev.png) left 48% no-repeat; 
+  opacity: 0; 
+  transition: opacity .6s; 
+}
+.lb-nav a.lb-prev:hover { 
+  opacity: 1; 
+}
+.lb-nav a.lb-next { 
+  width: 64%; 
+  right: 0; 
+  float: right; 
+  background: url(../img/next.png) right 48% no-repeat; 
+  opacity: 0; 
+  transition: opacity .6s; 
+}
+.lb-nav a.lb-next:hover { 
+  opacity: 1; 
+}
+.lb-dataContainer { margin: 0 auto; 
+  padding-top: 5px; 
+  width: 100%; 
+  border-bottom-left-radius: 4px; 
+  border-bottom-right-radius: 4px; 
+}
+.lb-data { 
+  padding: 0 4px; 
+  color: #ccc; 
+}
+.lb-data .lb-details { 
+  width: 85%; float: left; 
+  text-align: left; 
+  line-height: 1.1em; 
+}
+.lb-data .lb-caption { 
+  font-size: 13px; 
+  font-weight: bold; 
+  line-height: 1em; 
+}
+.lb-data .lb-caption a { 
+  color: #4ae; 
+}
+.lb-data .lb-number { 
+  display: block; 
+  clear: left; 
+  padding-bottom: 1em; 
+  font-size: 12px; 
+  color: #999; 
+}
+.lb-data .lb-close { 
+  display: block; 
+  float: right; 
+  width: 30px; 
+  height: 30px; 
+  background: url(../img/close.png) top right no-repeat; opacity: .7; 
+  transition: opacity .2s; 
+}
+.lb-data .lb-close:hover { 
+  cursor: pointer; 
+  opacity: 1; 
+}
+
 
 /* Additional lightbox / container styles (kept from template) */
-.lb-outerContainer { position: relative; width: 250px; height: 250px; margin: 0 auto; border-radius: 4px; background-color: white; }
-.lb-loader { position: absolute; top: 43%; left: 0; height: 25%; width: 100%; text-align: center; line-height: 0; }
-.lb-cancel { display: block; width: 32px; height: 32px; margin: 0 auto; background: url(../img/loading.gif) no-repeat; }
-.lb-nav { position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
-.lb-nav a { outline: none; background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='); }
-.lb-prev, .lb-next { height: 100%; cursor: pointer; display: block; }
-.lb-nav a.lb-prev { width: 34%; left: 0; float: left; background: url(../img/prev.png) left 48% no-repeat; opacity: 0; transition: opacity .6s; }
-.lb-nav a.lb-prev:hover { opacity: 1; }
-.lb-nav a.lb-next { width: 64%; right: 0; float: right; background: url(../img/next.png) right 48% no-repeat; opacity: 0; transition: opacity .6s; }
-.lb-nav a.lb-next:hover { opacity: 1; }
-.lb-dataContainer { margin: 0 auto; padding-top: 5px; width: 100%; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
-.lb-data { padding: 0 4px; color: #ccc; }
-.lb-data .lb-details { width: 85%; float: left; text-align: left; line-height: 1.1em; }
-.lb-data .lb-caption { font-size: 13px; font-weight: bold; line-height: 1em; }
-.lb-data .lb-caption a { color: #4ae; }
-.lb-data .lb-number { display: block; clear: left; padding-bottom: 1em; font-size: 12px; color: #999; }
-.lb-data .lb-close { display: block; float: right; width: 30px; height: 30px; background: url(../img/close.png) top right no-repeat; opacity: .7; transition: opacity .2s; }
-.lb-data .lb-close:hover { cursor: pointer; opacity: 1; }
-
+/* ============================================================================================== */
 /* ========= RESPONSIVE TWEAKS ========= */
+
+
+
 @media (max-width: 767px) {
   .baner-content { padding: 40px 20px 80px; }
   .baner-content h1 { font-size: clamp(32px, 9vw, 64px); line-height: 1.05; }
