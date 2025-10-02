@@ -1,0 +1,443 @@
+/* ==========================
+   Mayaví Pajú — templatemo-main.css
+   ========================== */
+
+/* Reset / base */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+html, body { 
+  margin: 0; 
+  padding: 0; 
+  height: 100%; 
+  font-family: 'Open Sans', Arial, sans-serif; 
+  color: #333; 
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+}
+p { font-size: 15px; line-height: 25px; margin: 0 0 1rem 0; color: #333; }
+section { padding: 25px 0 35px; background: transparent; }
+
+/* Links */
+a { color: #ff7d27; text-decoration: none; transition: color .2s ease; }
+a:hover { color: #ff8e43; }
+
+/* ========= FIXED SIDE NAV ========= */
+.fixed-side-navbar {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 99999;
+  margin-top: -100px;
+  text-align: right;
+  padding: 30px 0;
+  transition: all .3s;
+}
+.fixed-side-navbar .nav { margin: 0; padding: 0; list-style: none; }
+.fixed-side-navbar .nav > li { position: relative; display: block; margin: 8px 0; }
+.fixed-side-navbar .nav > li a {
+  color: #fff;
+  min-height: 32px;
+  background: transparent;
+  padding: 5px 45px 5px 25px;
+  display: inline-block;
+  position: relative;
+}
+.fixed-side-navbar .nav > li a span { display: none; transition: all .2s; }
+.fixed-side-navbar:hover .nav > li a span {
+  display: block;
+  color: rgba(0,0,0,0.65);
+  background: #fff;
+  padding: 2px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.fixed-side-navbar .nav > li a:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  margin-top: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(250,250,250,0.75);
+  transform: scale(0.6);
+  transition: all .3s;
+}
+.fixed-side-navbar .nav > li a.active,
+.fixed-side-navbar .nav > li a:hover { color: #ff7d27; }
+
+/* esconder nav fixa em telas pequenas */
+@media (max-width: 767px) {
+  .fixed-side-navbar { display: none; }
+}
+
+/* ========= PRIMARY BUTTON ========= */
+.primary-button a {
+  display: inline-block;
+  background-color: #ff7d27;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+.primary-button a:hover { background: #ff8e43; }
+
+/* ========= PARALLAX / BANNER ========= */
+.parallax-content { width: 100%; min-height: 100vh; background-size: cover; background-position: center center; }
+.baner-content {
+  padding-top: 30vh;
+  text-align: center;
+  background-image: url('../img/mayavi_panorama 2.jpg');
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.baner-content h1 {
+  margin: 0;
+  font-size: clamp(48px, 8vw, 128px);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+.baner-content em { color: #ff7d27; font-weight: 600; font-style: normal; }
+.baner-content span { display: inline-block; margin-top: -20px; font-weight: 300; font-size: clamp(18px, 3.5vw, 48px); color: #fff; }
+
+/* ========= HIGHLIGHT (logo circular + frase) ========= */
+.highlight-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  background: rgba(0, 0, 0, 0); /* leve esfumado */
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0); /* efeito de glow suave */
+  backdrop-filter: blur(1px); /* esfumado extra */
+  border-radius: 10%;
+  
+}
+.highlight-logo {
+  width: 300px;
+  height: 300px;
+  border-radius: 10%;
+  object-fit: cover;
+  border: 4px solid #ff7d2700;
+  margin-bottom: 10px;
+}
+.highlight-text {
+  font-family: 'Pacifico', cursive; /* fonte praia */
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 600px;
+
+  /* animação */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 2.2s ease-out forwards;
+}
+.highlight-text::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ff7d27;
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  60% { opacity: 0.6; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ========= SERVICE CONTENT ========= */
+.service-content {
+  padding-top: 15vh;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-image: url('../img/mayavi_ap_sala_escuro.jpg');
+  background-size: cover;
+  background-position: center center;
+  min-height: 70vh;
+  color: #fff;
+  background-attachment: fixed;
+}
+.service-content .left-text h4 { font-size: 24px; font-weight: 500; color: #fff; margin-bottom: 10px; }
+.service-content .left-text .line-dec { width: 45px; height: 3px; background: #ff7d27; margin: 20px 0; }
+.service-content .left-text p { color: #f3f3f3; }
+.service-content .service-item { background: rgba(0,0,0,0.5); padding: 25px 30px; text-align: center; color: #e0d8d8; margin-bottom: 30px; border-radius: 6px; }
+.service-content .service-item .line-dec { width: 45px; height: 3px; background: #ff7d27; margin: 20px auto 15px; }
+.service-content .service-item p { color: #f3f3f3;}
+/* ========= PROJECTS / CAROUSEL ========= */
+/* ========= REVIEWS / CAROUSEL ========= */
+.projects-content {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5vh;
+  background-image: url('../img/5th-section.jpg'); /* ou troque por um fundo mais neutro */
+  min-height: 40vh;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects-content .review-item {
+  background: rgba(141, 122, 122, 0.432);
+  color: #fff;
+  padding: 10px 25px;
+  margin: 15px;
+  border-radius: 30px;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-content .review-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+}
+
+.projects-content .review-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px auto;
+  border: 3px solid #ff7d27;
+}
+
+.projects-content .review-name {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.projects-content .review-stars {
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+.projects-content .review-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #f3f3f3;
+}
+
+/* Responsivo */
+@media (max-width: 767px) {
+  .projects-content { padding-top: 8vh; }
+  .projects-content .review-item { max-width: 90%; margin: 15px auto; }
+  .projects-content .review-text { font-size: 13px; }
+  .projects-content .review-name { font-size: 16px; }
+}
+
+/* CENTRALIZA O CARROSSEL DE REVIEWS */
+#owl-testimonials {
+    width: 100%;
+    margin: 0 auto;          /* centraliza o container do carrossel */
+    padding: 20px 0;
+}
+
+.owl-carousel .owl-stage {
+    display: flex !important;         /* ativa flexbox no stage */
+    justify-content: center !important; /* centraliza os itens horizontalmente */
+}
+
+.owl-carousel .owl-item {
+    display: flex;                   /* ativa flexbox no item */
+    justify-content: center;         /* centraliza o conteúdo dentro do item */
+    align-items: center;             /* centraliza verticalmente */
+    text-align: center;              /* garante que o texto fique centralizado */
+}
+
+/* Centraliza os elementos dentro de cada review */
+#owl-testimonials .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ========= TABS / OUR STORY ========= */
+
+.tabs-content {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 8vh;
+  background-image: url('../img/mayavi_ap_sala.jpg');
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  background-attachment: fixed;
+  color: #fff;
+}
+.wrapper { 
+  text-align: center; 
+  color: #fff; }
+.tabs { 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; }
+.tabs li { 
+  display: inline-block; 
+  margin: 10px; }
+.tabs a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 15px;
+  border: 4px solid #fff;
+  border-radius: 6px;
+}
+.tabs a:hover { color: #ff7d27; 
+}
+.tabs .active { border-color: #ff7d27; 
+}
+
+.tabs-content {
+  position: relative;
+  min-height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+
+.tabs-content::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+}
+
+
+.tabgroup p { 
+  background: rgba(0,0,0,0.5); 
+  color: #fff; padding: 25px; 
+  border-radius: 6px; }
+
+
+
+
+/* ========= CONTACT / MAP ========= */
+.contact-content {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 16vh;
+  background-image: url('../img/mayavi_barcos_praia.jpg');
+  background-size: cover;
+  background-position: center center;
+  min-height: 60vh;
+  background-attachment: fixed;
+}
+.contact-form { background: rgba(0,0,0,0.5); padding: 30px 25px; margin-bottom: 30px; border-radius: 6px; }
+#contact input, #contact textarea {
+  border-radius: 3px;
+  padding-left: 15px;
+  font-size: 13px;
+  color: #232323;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  width: 100%;
+  margin-bottom: 15px;
+}
+#contact textarea { padding-top: 10px; min-height: 165px; max-height: 220px; }
+#contact button { display: inline-block; background: #ff7d27; padding: 12px 20px; width: 100%; border-radius: 6px; text-transform: uppercase; font-size: 13px; color: #fff; border: none; cursor: pointer; }
+#contact button:hover { background: #ff8e43; }
+.map { margin-bottom: 30px; width: 100%; background: rgba(0,0,0,0.45); padding: 15px; border-radius: 6px; }
+
+/* ========= FOOTER ========= */
+footer { text-align: center; background-color: #282b2f; padding: 60px 0; color: #fff; }
+footer .primary-button { margin-bottom: 30px; }
+footer ul { padding: 0; margin: 0; list-style: none; }
+footer ul li { display: inline-block; margin: 0 4px; }
+footer ul li a {
+  width: 40px; height: 40px; line-height: 40px; text-align: center; display: inline-block;
+  background: #ff7d27; color: #282b2f; border-radius: 50%; text-decoration: none; font-size: 17px;
+}
+footer ul li a:hover { background: #ff8e43; color: #282b2f; }
+footer p { font-size: 12px; margin-top: 15px; color: #fff; letter-spacing: .5px; margin-bottom: 0; }
+
+/* ========= LIGHTBOX ========= */
+body:after { content: url(../img/close.png) url(../img/loading.gif) url(../img/prev.png) url(../img/next.png); display: none; }
+.lightboxOverlay { position: absolute; top: 0; left: 0; z-index: 99999; background-color: black; opacity: 0.8; display: none; }
+.lightbox { position: absolute; top: 0; left: 0; width: 100%; z-index: 100000; text-align: center; line-height: 0; font-weight: normal; }
+.lightbox .lb-image { display: block; height: auto; max-width: inherit; max-height: none; border-radius: 3px; border: 4px solid white; }
+
+/* Additional lightbox / container styles (kept from template) */
+.lb-outerContainer { position: relative; width: 250px; height: 250px; margin: 0 auto; border-radius: 4px; background-color: white; }
+.lb-loader { position: absolute; top: 43%; left: 0; height: 25%; width: 100%; text-align: center; line-height: 0; }
+.lb-cancel { display: block; width: 32px; height: 32px; margin: 0 auto; background: url(../img/loading.gif) no-repeat; }
+.lb-nav { position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
+.lb-nav a { outline: none; background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='); }
+.lb-prev, .lb-next { height: 100%; cursor: pointer; display: block; }
+.lb-nav a.lb-prev { width: 34%; left: 0; float: left; background: url(../img/prev.png) left 48% no-repeat; opacity: 0; transition: opacity .6s; }
+.lb-nav a.lb-prev:hover { opacity: 1; }
+.lb-nav a.lb-next { width: 64%; right: 0; float: right; background: url(../img/next.png) right 48% no-repeat; opacity: 0; transition: opacity .6s; }
+.lb-nav a.lb-next:hover { opacity: 1; }
+.lb-dataContainer { margin: 0 auto; padding-top: 5px; width: 100%; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
+.lb-data { padding: 0 4px; color: #ccc; }
+.lb-data .lb-details { width: 85%; float: left; text-align: left; line-height: 1.1em; }
+.lb-data .lb-caption { font-size: 13px; font-weight: bold; line-height: 1em; }
+.lb-data .lb-caption a { color: #4ae; }
+.lb-data .lb-number { display: block; clear: left; padding-bottom: 1em; font-size: 12px; color: #999; }
+.lb-data .lb-close { display: block; float: right; width: 30px; height: 30px; background: url(../img/close.png) top right no-repeat; opacity: .7; transition: opacity .2s; }
+.lb-data .lb-close:hover { cursor: pointer; opacity: 1; }
+
+/* ========= RESPONSIVE TWEAKS ========= */
+@media (max-width: 767px) {
+  .baner-content { padding: 40px 20px 80px; }
+  .baner-content h1 { font-size: clamp(32px, 9vw, 64px); line-height: 1.05; }
+  .baner-content span { font-size: 18px; margin-top: 8px; }
+  .service-content { padding-top: 5vh; text-align: center; background-attachment: scroll; }
+  .tabs-content, .contact-content { background-attachment: scroll; padding-top: 6vh; }
+  .primary-button a { font-size: 15px; padding: 12px 18px; }
+  .projects-content .item img { max-width: 140px; }
+}
+
+/* container width to match bootstrap */
+@media (min-width: 1200px) {
+  .baner-content {
+    justify-content: flex-start; /* alinha ao topo */
+    padding-top: 18vh; /* ajuste fino - estava 30vh */
+  }
+
+  .highlight-banner {
+    margin-top: 5vh; /* espaço abaixo do título */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 30;
+    margin-right: 30;
+    background: rgba(0, 0, 0, 0); /* leve esfumado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0); /* efeito de glow suave */
+    backdrop-filter: blur(1px); /* esfumado extra */
+    border-radius: 10%;
+  }
+}
