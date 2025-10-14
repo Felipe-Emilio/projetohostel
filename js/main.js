@@ -26,20 +26,48 @@ jQuery(document).ready(function($) {
       
       // smoothscroll on sidenav click
 
-    $('.tabgroup > div').hide();
-        $('.tabgroup > div:first-of-type').show();
-        $('.tabs a').click(function(e){
-          e.preventDefault();
-            var $this = $(this),
-            tabgroup = '#'+$this.parents('.tabs').data('tabgroup'),
-            others = $this.closest('li').siblings().children('a'),
-            target = $this.attr('href');
-        others.removeClass('active');
-        $this.addClass('active');
-        $(tabgroup).children('div').hide();
-        $(target).show();
-      
-    })
+/* ========= NOVO SISTEMA DE TABS ========= */
+$(document).off('click.tabsHandler').on('click.tabsHandler', '.tabs a', function(e) {
+  e.preventDefault();
+  var $this = $(this);
+
+  // identifica o grupo (ex: data-tabgroup="first-tab-group")
+  var groupName = $this.closest('ul.tabs').data('tabgroup');
+  if (!groupName) return;
+
+  var $tabgroup = $('#' + groupName);
+  var targetSelector = $this.attr('href');
+  var $target = $tabgroup.find(targetSelector);
+
+  if ($target.length === 0) {
+    $target = $(targetSelector); // fallback
+    if ($target.length === 0) return;
+  }
+
+  // atualiza classes nos botões
+  $this.closest('ul.tabs').find('a').removeClass('active');
+  $this.addClass('active');
+
+  // inicializa o grupo se ainda não estiver
+  if (!$tabgroup.data('tabs-initialized')) {
+    $tabgroup.children().hide();
+    $tabgroup.children('.active').show();
+    $tabgroup.data('tabs-initialized', true);
+  }
+
+  // evita repetição se já estiver visível
+  if ($target.is(':visible')) return;
+
+  // animação de troca suave
+  var $currentlyVisible = $tabgroup.children(':visible');
+  $currentlyVisible.stop(true, true).fadeOut(250, function() {
+    $currentlyVisible.removeClass('active');
+    $target.stop(true, true).fadeIn(300).addClass('active');
+  });
+});
+/* ========= FIM NOVO SISTEMA DE TABS ========= */
+
+
 
     var owl = $("#owl-testimonials");
 
