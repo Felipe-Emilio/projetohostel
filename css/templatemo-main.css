@@ -113,6 +113,7 @@ a:hover { color: rgb(231, 122, 107); }
 
 .primary-button a {
   display: inline-block;
+  margin-bottom: 10px;
   background-color: rgb(231, 122, 107);
   padding: 12px 20px;
   border-radius: 6px;
@@ -565,17 +566,7 @@ a:hover { color: rgb(231, 122, 107); }
 /* ============================================================================================== */
 /* ========= CONTACT / MAP ========= */
 
-.contact-content {
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  background-image: url('../img/mayavi_barcos_praia.jpg');
-  background-size: cover;
-  background-position: center center;
-  min-height: 60vh;
-  background-attachment: fixed;
-}
+
 
 .contact-social {
   padding-left: 15px;
@@ -613,6 +604,12 @@ a:hover { color: rgb(231, 122, 107); }
   margin: 15px auto 0;
 }
 
+.contact-social a {
+  font-family: "Lobster", sans-serif;
+  font-size: 1.9rem;
+  color: #fff;
+}
+
 .social-buttons {
   display: flex;
   justify-content: center;
@@ -624,17 +621,14 @@ a:hover { color: rgb(231, 122, 107); }
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 28px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #fff;
+  padding: 14px 100px;
   text-decoration: none;
   border-radius: 50px;
   transition: all 0.3s ease;
 }
 
 .social-btn i {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 /* Cores individuais */
@@ -644,23 +638,23 @@ a:hover { color: rgb(231, 122, 107); }
 }
 .social-btn.instagram:hover {
   filter: brightness(1.1);
-  transform: scale(1.05);
-}
-
-.social-btn.facebook {
-  background-color: #3b5998;
-}
-.social-btn.facebook:hover {
-  background-color: #2d4373;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .social-btn.airbnb {
-  background-color: #ff7579;
+background: linear-gradient(45deg, #f5252c, #ff7579);
 }
 .social-btn.airbnb:hover {
-  background-color: #f5252c;
-  transform: scale(1.05);
+  filter: brightness(1.1);
+  transform: scale(1.1);
+}
+
+.social-btn.google {
+  background: linear-gradient(45deg, #EA4335, #4285F4);
+}
+.social-btn.google:hover {
+  filter: brightness(1.1);
+  transform: scale(1.1);
 }
 
 /* Responsividade */
@@ -670,6 +664,19 @@ a:hover { color: rgb(231, 122, 107); }
     justify-content: center;
   }
 }
+
+.contact-content {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  background-image: url('../img/mayavi_barcos_praia.jpg');
+  background-size: cover;
+  background-position: center center;
+  min-height: 60vh;
+  background-attachment: fixed;
+}
+
 .map { 
 margin-bottom: 20px;
 margin-top: 10px; 
